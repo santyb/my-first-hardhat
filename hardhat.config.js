@@ -1,3 +1,4 @@
+//Begin
 require("@nomiclabs/hardhat-ethers");
 require('dotenv').config()
 
@@ -5,7 +6,7 @@ require('dotenv').config()
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "kovan",
+  defaultNetwork: "rinkeby",
     networks: {
         hardhat: {
             // // If you want to do some forking, uncomment this
@@ -15,11 +16,12 @@ module.exports = {
         },
         localhost: {
         },
-        kovan: {
-            url: process.env.KOVAN_RPC_URL,
+        rinkeby: {
+            url: process.env.RINKEBY_RPC_URL,
             accounts: [process.env.PRIVATE_KEY],
             saveDeployments: true,
         }
     },
-  solidity: "0.7.3",
+  solidity: "0.8.13",
 };
+//End
